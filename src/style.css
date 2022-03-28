@@ -74,6 +74,16 @@ ul {
   font-size: 18px;
 }
 
+   
+.source {
+color: #661a2a;
+
+}
+.west {
+text-align: center;
+
+}
+
 .weather-app {
   border: 1px solid #dadde1;
   border-radius: 10px;
