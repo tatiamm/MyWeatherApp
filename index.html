@@ -32,7 +32,8 @@
                 class="form-control"
                 placeholder="City search"
                 id="search-input"
-                aria-describedby="button-addon2"
+								aria-describedby="button-addon2"
+								autocomplete="off"
               />
               <button
                 class="btn btn-outline-secondary search-button"
@@ -69,18 +70,21 @@
             
           </li>
           </ul>
-          </p>
+					</p>
+					<img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Clear" id="icon" class="forecast-item" />
 
         </div>
       </div>
 
       <div class="container">
-        <div class="forecast"><span class="temperature" id="temperature">19</span
-          ><span class="units">
-                  <a href="#" id="celsius-link">°C</a> |
-                  <a href="#" id="fahrenheit-link">°F</a></span>
+        <div class="weather-forecast">
+					<span class="temperature" id="temperature"></span
+					>
+					<span class="units">
+                  <a href="#" id="celsius-link" class="active">°C </a> |
+                  <a href="#" id="fahrenheit-link" class="inactive">°F</a></span>
         </div>
-
+      
         <div class="container">
           <div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3">
             <div class="col">
