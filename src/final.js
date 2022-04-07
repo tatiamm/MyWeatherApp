@@ -37,7 +37,7 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index > 0 && index < 7) {
       forecastHTML =
         forecastHTML +
         `
@@ -48,7 +48,8 @@ function displayForecast(response) {
         forecastDay.weather[0].icon
       }@2x.png"
       alt=""
-      width="45"
+      width="50"
+  
     />
     <div class="weather-forecast-temperatures">
       <span class="weather-forecast-temperature-max"> ${Math.round(
@@ -86,8 +87,7 @@ function showTemperature(response) {
   let visibilityElement = document.querySelector("#visibility");
   let iconElement = document.querySelector("#icon");
 
-  celsiusTemperature = response.data.main.temp;
-
+  let celsiusTemperature = response.data.main.temp;
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -130,34 +130,9 @@ function getYourPlace(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-let celsiusTemperature = null;
-
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", showCity);
 searchForm.addEventListener("click", showCity);
-
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
-}
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getYourPlace);
