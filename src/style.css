@@ -17,6 +17,7 @@
     rgb(245, 220, 154) 0%,
     rgb(164, 78, 51) 90%
   );
+  opacity: 0.8;
 }
 
 .forecast-item {
@@ -118,8 +119,10 @@ ul {
   color: #49484a;
   text-decoration: none;
 }
+
 .west {
   text-align: center;
+  color: #4a4a4b;
 }
 
 .weather-app {
@@ -133,11 +136,9 @@ ul {
 }
 body {
   background: linear-gradient(
-    89.2deg,
-    rgb(0, 0, 0) 10.4%,
-    rgb(255, 0, 0) 37.1%,
-    rgb(255, 216, 51) 64.3%,
-    rgb(255, 255, 255) 90.5%
+    109.6deg,
+    rgb(6, 2, 2) 32.4%,
+    rgb(137, 30, 47) 98.8%
   );
 
   background-repeat: no-repeat;
