@@ -21,6 +21,7 @@
 
   <body>
     <div class="container">
+       
       <div class="weather-app">
           
       <div>
@@ -47,8 +48,8 @@
               id = "current-location-button"
               type="button"
               id="button-addon2"
-            >
-              Current
+            > Here <i class="fas fa-map-marker-alt"></i>
+           
             </button>
             </div>
           </div>
@@ -63,16 +64,18 @@
             
               </li>
 
-              <li id="date">
-            
             </li>
             <li id = "description">
+
+              <li id="date">
+            
+         
             
 
           </li>
           </ul>
 					</p>
-					<img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Clear" id="icon" class="forecast-item" />
+					<img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Clear" width="140" id="icon" class="forecast-item" />
 
         </div>
       </div>
@@ -82,8 +85,7 @@
 					<span class="temperature" id="temperature"></span
 					>
 					<span class="units">
-                  <a href="#" id="celsius-link" class="active">°C </a> |
-                  <a href="#" id="fahrenheit-link" class="inactive">°F</a></span>
+                °C </span>
         </div>
       
         <div class="weather-forecasts" id="forecast"></div>
@@ -102,14 +104,14 @@
     </p>
       </div>
       
-</div>
 
+      </div>
     </div>  
     </div>
     <p class = "west">
-      <small>
+      <small>Coded by Tatiana Makarova and is
         <a href="https://github.com/tatiamm/MyWeatherApp"
-        target="_blank" class="source">Open-source code</a>, by Tatiana Makarova
+        target="_blank" class="source"> open-sourced on GitHub</a> 
       </small>
       </p>
     <script src="src/final.js"></script>
